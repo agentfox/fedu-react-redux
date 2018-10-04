@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
 import Footer from './Footer';
-//import Home from './Home';
 import Nav from './Nav';
-//import News from './News';
-import Contact from './Contact';
-//import NewsDetail from './NewsDetail';
-
+import UrlNavigator from '../routers/UrlNavigator';
+import { BrowserRouter as Router } from "react-router-dom";
 class App extends Component {
   render() {
     return (
-      <div>
-        <Nav />
-        <Contact />
-        <Footer />
-      </div>
+      <Router>
+          <div>
+            <Nav />
+            <UrlNavigator />
+            <Footer />
+          </div>
+      </Router>
     );
   }
 }

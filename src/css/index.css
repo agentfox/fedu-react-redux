@@ -23,3 +23,14 @@ li.nav-item.mr-3.btn-signin {
     padding-left: 5px;
     padding-right: 5px;
   }
+.li-about {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 30%;
+}
+.timeline-image {
+    margin-right: 20px;
+}
+.last-about {
+    text-align: center;
+}

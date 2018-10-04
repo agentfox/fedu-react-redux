@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {  Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 export default class Nav extends Component {
   render() {
     return (
@@ -15,17 +15,18 @@ export default class Nav extends Component {
                   <div className="collapse navbar-collapse" id="navbarResponsive">
                     <ul className="navbar-nav ml-auto">
 
+
                       <li className="nav-item mr-3">
-                        <Link to="/">Home</Link>
+                        <NavLink to="/news">News</NavLink>
+                      </li>
+                      <li className="nav-item mr-3 nav-home">
+                        <NavLink to="/about">About</NavLink>
                       </li>
                       <li className="nav-item mr-3">
-                        <Link to="/news">News</Link>
-                      </li>
-                      <li className="nav-item mr-3">
-                        <Link to="/contact">Contact</Link>
+                        <NavLink to="/contact">Contact</NavLink>
                       </li>
                       <li className="nav-item mr-3 btn-signin">
-                        <Link to="/registration">Sign In</Link>
+                        <NavLink to="/registration">Sign In</NavLink>
                       </li>
 
                     </ul>

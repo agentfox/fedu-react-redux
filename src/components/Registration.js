@@ -24,7 +24,7 @@ export default class Registration extends Component {
                         </div>
                         <div className="custom-control custom-checkbox mb-3">
                             <input type="checkbox" className="custom-control-input" id="customCheck1" />
-                            <label className="custom-control-label" htmlFor="customCheck1">Remember password</label>
+                            <label className="custom-control-label text-primary" htmlFor="customCheck1">Remember password</label>
                         </div>
                         <button className="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
                         <hr className="my-4" />

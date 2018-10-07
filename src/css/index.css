@@ -34,3 +34,8 @@ li.nav-item.mr-3.btn-signin {
 .last-about {
     text-align: center;
 }
+#mainNav .navbar-nav>li>a.active-nav {
+    /* color: #fdcc52!important; */
+    background-color: transparent;
+    color: orangered;
+}

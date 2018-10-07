@@ -17,16 +17,16 @@ export default class Nav extends Component {
 
 
                       <li className="nav-item mr-3">
-                        <NavLink to="/news">News</NavLink>
+                        <NavLink activeClassName="active-nav" to="/news">News</NavLink>
                       </li>
                       <li className="nav-item mr-3 nav-home">
-                        <NavLink to="/about">About</NavLink>
+                        <NavLink activeClassName="active-nav" to="/about">About</NavLink>
                       </li>
                       <li className="nav-item mr-3">
-                        <NavLink to="/contact">Contact</NavLink>
+                        <NavLink activeClassName="active-nav" to="/contact">Contact</NavLink>
                       </li>
                       <li className="nav-item mr-3 btn-signin">
-                        <NavLink to="/registration">Sign In</NavLink>
+                        <NavLink activeClassName="active-nav" to="/registration">Sign In</NavLink>
                       </li>
 
                     </ul>

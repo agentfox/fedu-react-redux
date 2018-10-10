@@ -21,7 +21,7 @@ export default class News extends Component {
             <div className="row">
             { 
                 seeder.map((item)=> (
-                    <NewsItem key={item.id} title = {item.title} newIntro={item.newsIntro} content={item.content} imageUrl={item.imageUrl} />
+                    <NewsItem key={item.id} newsId={item.id} title = {item.title} newsIntro={item.newsIntro} content={item.content} imageUrl={item.imageUrl} />
                 ))
             }
             

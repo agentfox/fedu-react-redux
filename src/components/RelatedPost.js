@@ -1,10 +1,10 @@
-import React, {Fragment, Component } from 'react'
 
-export default class NewsItem extends Component {
-  
-  
-  
-   to_slug = (str)=>
+
+import React , {Fragment} from 'react'
+import seeder from '../seeder';
+
+export default (props) => {
+    const to_slug = (str)=>
     {
         // Chuyển hết sang chữ thường
         str = str.toLowerCase();     
@@ -33,24 +33,22 @@ export default class NewsItem extends Component {
         // return
         return str;
     }
+  return (
+    <Fragment>
+        {
 
-  render() {
-    
-    return ( // /news-detail/
-      <Fragment>
-        <div className="col-4 p-0">
-                <div className="card-desks">
-                <div className="card-body">
-                    <a href={`/news-detail/${this.to_slug(this.props.title)}.${this.props.newsId}.html`} ><img src={this.props.imageUrl} alt='abc' className="img-fluid sizing" /></a> 
-                    <blockquote className="blockquote">
-                    <p className="mb-0"><strong>{this.props.title}</strong></p>
-                    <p><cite title="News Intro">{this.props.newsIntro}</cite></p>
-                    </blockquote>
+            seeder.filter(post => post.id !==props.thisPostId).slice(0,4)
+            .map(post => (
+                <div key={post.id} className="card">
+                    <img className="card-img-top sm-sizing" src={post.imageUrl} alt='news' />
+                    <div className="card-body">
+                        <a href={`/news-detail/${to_slug(post.title)}.${post.id}.html`} className="a-news-title" ><h5 className="card-title news-title">{post.title}</h5></a>
+                        <p className="card-text">{post.newsIntro}</p>
+                    </div>
                 </div>
-                </div>
-            </div>
-      </Fragment>
-    )
-  }
+            ))
+        }
+    </Fragment>
+  )
 }
 
